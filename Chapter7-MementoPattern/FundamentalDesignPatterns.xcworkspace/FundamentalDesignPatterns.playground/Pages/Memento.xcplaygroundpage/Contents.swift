@@ -66,7 +66,7 @@ game.monstersEatPlayer()
 game.rackUpMassivePoints()
 
 let gameSystem = GameSystem()
-gameSystem.save(game, title: "Best Game Ever")
+try gameSystem.save(game, title: "Best Game Ever")
 
 // New Game
 game = Game()
