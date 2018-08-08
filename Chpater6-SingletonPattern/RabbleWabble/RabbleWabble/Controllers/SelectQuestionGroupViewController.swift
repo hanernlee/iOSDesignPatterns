@@ -38,6 +38,7 @@ public class SelectQuestionGroupViewController: UIViewController {
   }
   
   // MARK: - Properties
+  private let appSettings = AppSettings.shared
   public lazy var questionGroups = QuestionGroup.allGroups()
   private var selectedQuestionGroup: QuestionGroup!
 
@@ -47,7 +48,7 @@ public class SelectQuestionGroupViewController: UIViewController {
       return
     }
 
-    viewController.questionStrategy = SequentialQuestionStrategy(questionGroup: selectedQuestionGroup)
+    viewController.questionStrategy = appSettings.questionStrategy(for: selectedQuestionGroup)
     viewController.delegate = self
   }
 }
