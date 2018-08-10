@@ -14,7 +14,7 @@ public class Observable<Type> {
     
     public var value: Type {
         didSet {
-            removeNilObserverCallback()
+            removeNilObserverCallbacks()
             notifyCallbacks(value: oldValue, option: .old)
             notifyCallbacks(value: value, option: .new)
         }

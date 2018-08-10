@@ -26,6 +26,7 @@
 		42EFDEE9201EEE0B002BB505 /* DiskCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFDEE8201EEE0B002BB505 /* DiskCaretaker.swift */; };
 		42EFDEEB201EF190002BB505 /* QuestionGroupCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFDEEA201EF190002BB505 /* QuestionGroupCaretaker.swift */; };
 		42EFDEEF201EFC79002BB505 /* BaseQuestionStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EFDEEE201EFC79002BB505 /* BaseQuestionStrategy.swift */; };
+		50493737211DD5BE00875390 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50493736211DD5BE00875390 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		42EFDEE8201EEE0B002BB505 /* DiskCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskCaretaker.swift; sourceTree = "<group>"; };
 		42EFDEEA201EF190002BB505 /* QuestionGroupCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionGroupCaretaker.swift; sourceTree = "<group>"; };
 		42EFDEEE201EFC79002BB505 /* BaseQuestionStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseQuestionStrategy.swift; sourceTree = "<group>"; };
+		50493736211DD5BE00875390 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = ../../../FundamentalDesignPatterns.xcworkspace/FundamentalDesignPatterns.playground/Pages/Observer.xcplaygroundpage/Sources/Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		42AAE3851FE5C369001CA654 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				50493736211DD5BE00875390 /* Observable.swift */,
 				42E7AD6620156DA4008E3014 /* AppSettings.swift */,
 				42AAE3881FE5C468001CA654 /* Question.swift */,
 				42AAE38A1FE5C483001CA654 /* QuestionGroup.swift */,
@@ -237,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50493737211DD5BE00875390 /* Observable.swift in Sources */,
 				429ED0941FF60B1300559705 /* SequentialQuestionStrategy.swift in Sources */,
 				42AAE3891FE5C468001CA654 /* Question.swift in Sources */,
 				42E7AD6720156DA4008E3014 /* AppSettings.swift in Sources */,
