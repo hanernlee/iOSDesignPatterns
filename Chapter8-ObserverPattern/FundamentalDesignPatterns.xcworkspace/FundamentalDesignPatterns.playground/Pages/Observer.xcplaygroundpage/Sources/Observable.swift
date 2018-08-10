@@ -12,7 +12,22 @@ public class Observable<Type> {
         }
     }
     
-    public var value: Type
+    public var value: Type {
+        didSet {
+            removeNilObserverCallback()
+            notifyCallbacks(value: oldValue, option: .old)
+            notifyCallbacks(value: value, option: .new)
+        }
+    }
+    
+    private func removeNilObserverCallbacks() {
+        callbacks = callbacks.filter { $0.observer != nil }
+    }
+    
+    private func notifyCallbacks(value: Type, option: ObservableOptions) {
+        let callbacksToNotify = callbacks.filter { $0.options.contains(option) }
+        callbacksToNotify.forEach { $0.closure(value, option) }
+    }
     
     public init(_ value: Type) {
         self.value = value
