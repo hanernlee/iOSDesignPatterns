@@ -33,7 +33,7 @@ public class ViewController: UIViewController {
   
   // MARK: - Properties
   public let annotationFactory = AnnotationFactory()
-  public var businesses: [YLPBusiness] = []
+  public var businesses: [Business] = []
   private let client = YLPClient(apiKey: YelpAPIKey)
   private let locationManager = CLLocationManager()
   
@@ -92,13 +92,13 @@ extension ViewController: MKMapViewDelegate {
         return
       }
 
-      guard let searchResult = searchResult,
+      guard let searchResult = searchResult?.adaptSearchResultsFromYLP(),
         error == nil else {
           print("Search failed: \(String(describing: error))")
           return
       }
 
-      strongSelf.businesses = searchResult.businesses
+      strongSelf.businesses = searchResult.business
       DispatchQueue.main.async {
         strongSelf.addAnnotations()
       }
