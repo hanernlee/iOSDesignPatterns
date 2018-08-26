@@ -29,7 +29,7 @@ public struct Queue<T> {
         array.append(element)
     }
     
-    public mutating func dequeue(_ element: T) -> T? {
+    public mutating func dequeue() -> T? {
         guard head < array.count, let element = array[head] else {
             return nil
         }
@@ -93,7 +93,7 @@ queue.dequeue()
 
 print("List of Tickets in queue")
 for ticket in queue {
-    pritn(ticket?.description as Any!)
+    print(ticket?.description as Any)
 }
 
 let sortedTickets = queue.sorted {
@@ -103,7 +103,7 @@ let sortedTickets = queue.sorted {
 var sortedQueue = Queue<Ticket>()
 
 for ticket in sortedTickets {
-    sortedQueue.enqueue(ticket)
+    sortedQueue.enqueue(ticket!)
 }
 
 print("\n")
