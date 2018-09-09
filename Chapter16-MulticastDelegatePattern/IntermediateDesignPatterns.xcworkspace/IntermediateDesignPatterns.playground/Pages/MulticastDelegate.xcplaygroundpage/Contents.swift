@@ -43,7 +43,7 @@ public class DispatchSystem {
 }
 
 let dispatch = DispatchSystem()
-var policeStation: PoliceStation! = PoliceStation
+var policeStation: PoliceStation! = PoliceStation()
 var fireStation: FireStation! = FireStation()
 
 dispatch.multicastDelegate.addDelegate(policeStation)
